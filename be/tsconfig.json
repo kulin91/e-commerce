@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2019"],
+    "outDir": "build",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "newLine": "lf",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "strict": true,
+    "target": "es2019"
+  },
+  "include": ["src/**/*"]
+}
