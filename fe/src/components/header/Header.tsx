@@ -4,9 +4,9 @@ import {
 	Route,
 	Link
 } from "react-router-dom";
-import { BasketPage } from "../pages/basket";
-import { HomePage } from "../pages/home";
-import { LoginPage } from "../pages/login";
+import { BasketPage } from "../../pages/basket";
+import { HomePage } from "../../pages/home";
+import { LoginPage } from "../../pages/login";
 import {style} from './style';
 import { createUseStyles } from 'react-jss';
 
