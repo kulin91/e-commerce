@@ -1,1 +1,10 @@
-export const style = {};
+export const style = {
+  categoriesContainer: {},
+  categoriesTitle: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+};

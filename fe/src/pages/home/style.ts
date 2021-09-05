@@ -7,9 +7,11 @@ export const style = {
     // height: 'calc(100vh - 100px)',
     backgroundColor: '#BDBDBD',
     display: 'flex',
-    // alignItems: 'center',
+    borderRadius: 6,
     justifyContent: 'center',
     width: '20vw',
+    margin: 16,
+    paddingTop: 20,
   },
 
   goodsBox: {

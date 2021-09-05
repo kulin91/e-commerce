@@ -2,6 +2,7 @@ import { style } from './style';
 import { createUseStyles } from 'react-jss';
 import { Good } from '../../components/good/Good';
 import GetGoods from '../../hooks/GetGoods';
+import { Categories } from '../../components/categories/Categories';
 
 export const HomePage = () => {
   const goodsArray = GetGoods();
@@ -10,7 +11,9 @@ export const HomePage = () => {
   const classes = useStyles();
   return (
     <div className={classes.mainContainer}>
-      <div className={classes.categoriesContainer}>Сategories</div>
+      <div className={classes.categoriesContainer}>
+        <Categories />
+      </div>
       <div className={classes.goodsBox}>
         <div className={classes.goodsContainer}>
           {goodsArray.map((item, index) => (

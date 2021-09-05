@@ -24,7 +24,7 @@ export const Good = (item: any) => {
             onClick={() => setCount(count - 1)}
             disabled={count === 0}
             className={classes.changeQuantity}>
-            -
+            −
           </button>
           <div className={classes.quantity}>{count}</div>
           <button onClick={() => setCount(count + 1)} className={classes.changeQuantity}>

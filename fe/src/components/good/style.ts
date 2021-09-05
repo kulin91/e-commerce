@@ -1,5 +1,4 @@
 export const style = {
-
   goodContainer: {
     height: 350,
     width: 300,
@@ -59,7 +58,7 @@ export const style = {
       left: 7,
       right: 7,
     },
-    fontSize: 30,
+    fontSize: 21,
     flex: 1,
     height: 30,
     width: 30,
@@ -71,7 +70,7 @@ export const style = {
     backgroundColor: '#E0E0E0',
     '&:hover': {
       backgroundColor: '#bdbdbd',
-    }
+    },
   },
 
   quantity: {
@@ -102,7 +101,6 @@ export const style = {
         color: '#D50000',
         height: 36,
       },
-    }
-  }
-
+    },
+  },
 };
