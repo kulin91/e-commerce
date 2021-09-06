@@ -4,7 +4,9 @@ export const style = {
   },
 
   categoriesContainer: {
-    // height: 'calc(100vh - 100px)',
+    top: 13,
+    position: 'sticky',
+    height: 'calc(100vh - 80px)',
     backgroundColor: '#BDBDBD',
     display: 'flex',
     borderRadius: 6,

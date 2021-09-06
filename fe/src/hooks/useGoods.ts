@@ -28,7 +28,7 @@ const categoriesFiltersConfig = [
 
 const categories = categoriesFiltersConfig.map((x) => x.name);
 
-export default function GetGoods() {
+export default function useGoods() {
   const [appState, setAppState] = useState([]);
 
   useEffect(() => {
@@ -38,5 +38,7 @@ export default function GetGoods() {
       setAppState(allGoods);
     });
   }, [setAppState]);
+  console.log(appState);
+
   return { appState, categories };
 }

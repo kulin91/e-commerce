@@ -1,5 +1,7 @@
 export const style = {
-  categoriesContainer: {},
+  categoriesContainer: {
+    // height: 2000,
+  },
   categoriesTitle: {
     display: 'flex',
     alignItems: 'center',

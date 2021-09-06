@@ -1,11 +1,11 @@
 import { style } from './style';
 import { createUseStyles } from 'react-jss';
 import { Good } from '../../components/good/Good';
-import GetGoods from '../../hooks/GetGoods';
+import useGoods from '../../hooks/useGoods';
 import { Categories } from '../../components/categories/Categories';
 
 export const HomePage = () => {
-  const goodsArray = GetGoods();
+  const goodsArray = useGoods();
 
   const useStyles = createUseStyles(style);
   const classes = useStyles();
