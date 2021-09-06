@@ -11,7 +11,7 @@ export const style = {
     justifyContent: 'center',
     width: '20vw',
     margin: 16,
-    paddingTop: 20,
+    // paddingTop: 20,
   },
 
   goodsBox: {

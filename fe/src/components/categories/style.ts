@@ -6,5 +6,6 @@ export const style = {
     justifyContent: 'center',
     fontSize: 18,
     fontWeight: 'bold',
+    marginTop: 30,
   },
 };

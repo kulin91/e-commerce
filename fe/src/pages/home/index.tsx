@@ -16,7 +16,7 @@ export const HomePage = () => {
       </div>
       <div className={classes.goodsBox}>
         <div className={classes.goodsContainer}>
-          {goodsArray.map((item, index) => (
+          {goodsArray.appState.map((item, index) => (
             <Good key={item + index} item={item} />
           ))}
         </div>
