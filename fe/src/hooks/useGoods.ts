@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import useGoodsList from './useGoodsList';
 
 const categoriesFiltersConfig = [
   {
@@ -8,37 +8,31 @@ const categoriesFiltersConfig = [
   },
   {
     name: 'Автомобили',
-    filter: (values: any) => {
-      const result = null;
-
-      return result;
-    },
+    filter: (values: string[]) => filterCategory(values, 'Автомобили'),
   },
   {
     name: 'Самолёты',
-    filter: (values: any) => {
-      let max = values[0];
-      for (let i = 0; i < values.length; i++) {
-        if (values[i].speed > max.speed) max = values[i];
-      }
-      return [max];
-    },
+    filter: (values: string[]) => filterCategory(values, 'Самолёты'),
   },
 ];
 
 const categories = categoriesFiltersConfig.map((x) => x.name);
 
 export default function useGoods() {
-  const [appState, setAppState] = useState([]);
+  const [selectedCategoryIndex, setSelectCategoryIndex] = useState(0);
+  const goodsList = useGoodsList();
+  const config = categoriesFiltersConfig[selectedCategoryIndex];
+  const goods = config.filter(goodsList);
 
-  useEffect(() => {
-    const apiUrl = 'http://localhost:5000/goods';
-    axios.get(apiUrl).then((resp) => {
-      const allGoods = resp.data;
-      setAppState(allGoods);
-    });
-  }, [setAppState]);
-  console.log(appState);
+  return { goods, categories, selectedCategoryIndex, setSelectCategoryIndex };
+}
 
-  return { appState, categories };
+function filterCategory(values: any, category: string) {
+  const result: string[] = [];
+  for (let i = 0; i < values.length; i++) {
+    if (values[i].category === category) {
+      result.push(values[i]);
+    }
+  }
+  return result;
 }

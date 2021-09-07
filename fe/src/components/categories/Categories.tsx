@@ -12,7 +12,7 @@ export const Categories = () => {
     <div className={classes.categoriesContainer}>
       <div className={classes.categoriesTitle}>Категории</div>
       {items.categories.map((item, index) => (
-        <ItemCategory key={item[index]} title={item} />
+        <ItemCategory onPress={index} key={item[index]} title={item} />
       ))}
     </div>
   );
