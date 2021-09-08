@@ -5,18 +5,22 @@ import useGoods from '../../hooks/useGoods';
 import { Categories } from '../../components/categories/Categories';
 
 export const HomePage = () => {
-  const goodsArray = useGoods();
+  const { goods, selectedCategoryIndex, setSelectCategoryIndex, categories } = useGoods();
 
   const useStyles = createUseStyles(style);
   const classes = useStyles();
   return (
     <div className={classes.mainContainer}>
       <div className={classes.categoriesContainer}>
-        <Categories />
+        <Categories
+          selectedCategoryIndex={selectedCategoryIndex}
+          setSelectCategoryIndex={setSelectCategoryIndex}
+          categories={categories}
+        />
       </div>
       <div className={classes.goodsBox}>
         <div className={classes.goodsContainer}>
-          {goodsArray.goods.map((item: object, index: any) => (
+          {goods.map((item: object, index: any) => (
             <Good key={item + index} item={item} />
           ))}
         </div>
