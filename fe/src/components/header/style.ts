@@ -1,4 +1,3 @@
-
 export const style = {
   header: {
     height: 100,
@@ -28,8 +27,15 @@ export const style = {
     '&:hover': {
       // fontSize: 21,
       fontWeight: 'bold',
-      color: '#D50000',
-    }
+      color: '#FF1744',
+    },
+  },
+
+  linkActive: {
+    textDecoration: 'none',
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#D50000',
   },
 
   boxForPriceLink: {
@@ -43,6 +49,5 @@ export const style = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-  }
-
+  },
 };
