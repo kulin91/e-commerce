@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
 export interface Good {
   _id: string;
@@ -12,16 +12,18 @@ export interface Good {
   updatedAt: Date;
 }
 
-const schema = new Schema<Good>({
-  title: String,
-  description: String,
-  category: String,
-  imgSrc: String,
-  price: Number,
-  isDelete: Boolean,
-},
+const goodSchema = new Schema<Good>(
+  {
+    title: String,
+    description: String,
+    category: String,
+    imgSrc: String,
+    price: Number,
+    isDelete: Boolean,
+  },
   {
     timestamps: true,
-  });
+  }
+);
 
-  export const GoodModel = model<Good>("Good", schema);
+export const GoodModel = model<Good>('Good', goodSchema);

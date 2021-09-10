@@ -10,6 +10,9 @@ import {
   deleteGood,
   hideGood,
 } from './services/goods';
+
+import { getAllAdmins } from './services/admins';
+
 import mongoose from 'mongoose';
 
 const connectionStr =
@@ -27,6 +30,8 @@ app.put('/goods/:id', updateGood);
 app.post('/goods', createGood);
 app.delete('/goods/:id', deleteGood);
 app.put('/goods/:id', hideGood);
+
+app.get('/admins', getAllAdmins);
 
 async function startServer() {
   await mongoose.connect(connectionStr, {
